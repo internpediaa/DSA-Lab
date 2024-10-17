@@ -1,0 +1,53 @@
+public class linearSearch {
+    
+    public static int linearS(int num[], int key)
+    {
+        for(int i= 0; i< num.length; i++){
+            if(num[i] == key)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static int linearS(String num[], String key) // Function Overloading...
+    { 
+        for(int i= 0; i< num.length; i++){
+            if(num[i] == key)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        
+        int num[] = {10, 25, 45, 45, 20};
+
+        int index = linearS(num, 20);
+
+        if(index == -1)
+        {
+            System.out.println("The index is not found");
+        }else
+        {
+            System.out.println("The Key is found at = " + index);
+
+        }
+
+        String menu[] = {"Samosa", "Paneer", "Tea"};
+
+        int indexS = linearS(menu, "Samosa");
+        if(indexS == -1)
+        {
+            System.out.println("The index is not found");
+        }else
+        {
+            System.out.println("The Key is found at = " + indexS);
+
+        }
+    }
+
+
+}
